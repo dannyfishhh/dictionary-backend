@@ -8,7 +8,7 @@ const router = Router();
 
 const limiter = rateLimit({
     windowMs: 5 * 60 * 1000,
-    max: 1,
+    max: 2,
     message: "Too many requests from this IP, please try again after 5 minutes"
 })
 

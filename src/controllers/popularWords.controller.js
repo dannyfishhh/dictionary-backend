@@ -1,6 +1,6 @@
 import pool from '../database/database.js';
 
-const getPopularWords = (req, res) => {
+const getPopularWords = async (req, res) => {
 
     try {
         
@@ -12,7 +12,7 @@ const getPopularWords = (req, res) => {
             LIMIT 5`
         ;
 
-        const [rows] = pool.query(query);
+        const [rows] = await pool.query(query);
 
         // Make an array of words from the result
 
