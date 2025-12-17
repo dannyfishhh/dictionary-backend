@@ -47,3 +47,5 @@ const searchWord = async (req, res) => {
     }
 
 };
+
+export { searchWord };
