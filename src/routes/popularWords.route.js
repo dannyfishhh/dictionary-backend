@@ -6,12 +6,12 @@ const router = Router();
 
 // limit each IP to 1 requests per 5 minutes
 
-const limiter = rateLimit({
+/* const limiter = rateLimit({
     windowMs: 5 * 60 * 1000,
     max: 2,
     message: "Too many requests from this IP, please try again after 5 minutes"
-})
+}) */
 
-router.get("/", limiter, getPopularWords);
+router.get("/", getPopularWords);
 
 export default router;
